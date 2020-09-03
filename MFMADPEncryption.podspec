@@ -20,11 +20,11 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "9.0"
   spec.source       = { :git => "https://github.com/pactera-mf-madp/MADPEncryption.git", :tag => "#{spec.version}" }
   # 引用的系统的framework
-  spec.frameworks = "openssl", "Security", "Foundation", "UIKit"
+  spec.frameworks = "Security", "Foundation", "UIKit"
   # 引用的系统的lib库
   spec.libraries = "c++.1"
   # 引用的三方的framework
-  spec.vendored_frameworks = "MADPEncryption.framework"
+  spec.vendored_frameworks = "MADPEncryption.framework", "openssl.framework"
   # pod需要引用的lib库
   # spec.vendored_library = 'Libraries/libProj4.a'
   # pod依赖的其他库
